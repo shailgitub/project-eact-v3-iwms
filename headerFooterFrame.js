@@ -14,10 +14,12 @@ class SpecialHeader extends HTMLElement{
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           
-          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span>
+           <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="service-details.html#r&d">Research and Development</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> 
+              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
                   <li><a href="#">Deep Dropdown 2</a></li>
@@ -87,9 +89,9 @@ class SpecialFooter extends HTMLElement{
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
           </ul>
@@ -98,11 +100,10 @@ class SpecialFooter extends HTMLElement{
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+           <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#r&d">Research and Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#engservices">Engineering services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#print3d">3d Printing </a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#consulting">Consulting Services</a></li>
           </ul>
         </div>
 
