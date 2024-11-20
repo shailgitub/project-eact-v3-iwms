@@ -904,6 +904,14 @@ section,
   text-transform: uppercase;
   font-family: var(--heading-font);
 }
+.section-title h4 {
+  color: var(--heading-color);
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+}
 
 @media (max-width: 768px) {
   .section-title p {

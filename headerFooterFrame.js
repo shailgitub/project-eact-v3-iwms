@@ -1,6 +1,6 @@
-class SpecialHeader extends HTMLElement{
-    connectedCallback(){
-        this.innerHTML=`<header id="header" class="header d-flex align-items-center fixed-top">
+class SpecialHeader extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -17,7 +17,9 @@ class SpecialHeader extends HTMLElement{
           <li class="dropdown"><a href="index.html#services"><span>Services</span>
            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="service-details.html#r&d">Research and Development</a></li>
+            
+           
+              <li><a href="service-details.html">Research and Development</a></li>
               <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> 
               <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
@@ -56,14 +58,13 @@ class SpecialHeader extends HTMLElement{
       <a class="cta-btn" href="index.html#about">Get Started</a>
 
     </div>
-  </header> `
-
-    }
+  </header> `;
+  }
 }
 
-class SpecialFooter extends HTMLElement{
-    connectedCallback(){
-        this.innerHTML=`
+class SpecialFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
        <footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
@@ -133,9 +134,8 @@ class SpecialFooter extends HTMLElement{
     </div>
 
   </footer>
-        `
-
-    }
+        `;
+  }
 }
-customElements.define('special-header', SpecialHeader)
-customElements.define('special-footer', SpecialFooter)
+customElements.define("special-header", SpecialHeader);
+customElements.define("special-footer", SpecialFooter);
