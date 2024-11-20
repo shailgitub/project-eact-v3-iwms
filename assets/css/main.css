@@ -1195,6 +1195,18 @@ section,
   border: 0;
 }
 
+.features .btn-get-started {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
 .features .nav-link {
   background-color: var(--surface-color);
   color: var(--heading-color);
@@ -1281,6 +1293,7 @@ section,
 .features .tab-pane p:last-child {
   margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Services 2 Section
