@@ -17,7 +17,9 @@ class SpecialHeader extends HTMLElement{
           <li class="dropdown"><a href="index.html#services"><span>Services</span>
            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="service-details.html#r&d">Research and Development</a></li>
+            
+            <li><a href="service-details-test.html">Research and Development-test</a></li>
+              <li><a href="service-details.html">Research and Development</a></li>
               <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> 
               <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
