@@ -644,11 +644,11 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
               <div class="portfolio-info">
                 <h4>Requirements Management</h4>
                 <!-- <p>Requirement synthesis and benchmarking of various systems collecting requirements from Legal, regulatory bodies, Standards requirements, Legacy products and available industrial solutions. -->
-                </p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
+               
+                <!--<div class="portfolio-links">-->
+                <!--  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
                   
-                </div>
+                </div>-->
               </div>
             </div></a>
           </div>
@@ -750,7 +750,7 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div> -->
               </div>
-            </div></a>
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
@@ -789,22 +789,15 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
           <span>We offer a challenging and rewarding experience for everyone who joins us, we encourage our associates to upskill and grow their scope of work,
             Lets Create something spectacular together.</span>
        </div> 
-      
         <div class="container" data-aos="fade-up" data-aos-delay="300"  >
        
           <br>
           <h3>Mail Us@</h3>
             <p><a href="mailto:career@e-actuell.com ">career@e-actuell.com</a></p>
-              </p>
+              
 
      
         </div>
-    
-  
-   
-      
-</div>
-
     </section><!-- /Team Section -->
 
     <!-- Contact Section -->
@@ -850,9 +843,12 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
 
             </div>
           </div>
-
-          <!-- <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+ 
+    
+          <div class="col-lg-6">
+            <form action="forms/mail.php"  onsubmit="return validate()" method="post"  data-aos="fade-up" data-aos-delay="500">
+               <!--<form action="validate()"  data-aos="fade-up" data-aos-delay="500"> -->
+              
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -860,7 +856,14 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+                </div>
+                 <div class="col-md-12 ">
+                  <!--<input type="text" class="form-control" name="contact" placeholder="Your Contact " required="true">-->
+                  
+                   <!--<input id="contact" type="tel" pattern="/^([+]\d{2}[ ])?\d{10}$/" required > -->
+                   <input id="contact" name="contact" type="tel" class="form-control" placeholder="9800000000 " pattern="^[789]\d{9}$" required >
+                    <!--<input id="contact" name="contact" type="tel" class="form-control" placeholder="+91 9800010110 " pattern="^([+]\d{2}[ ])?\d{10}$" required >-->
                 </div>
 
                 <div class="col-md-12">
@@ -871,20 +874,31 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
                   <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                <div class="col-md-4 text-right">
+                  <!--<div class="loading">Loading</div>-->
+                  <!--<div class="error-message"></div>-->
+                  <!--<div class="sent-message">Your message has been sent. Thank you!</div>-->
+                  <input type="submit"  class="btn btn-secondary" value="Send">
+<!--<input type="submit"  class="btn-get-started" value="Send">-->
+                  <!--<button type="submit " class="btn btn-secondary">Send Message</button>-->
+                   <!--<div id="statusMessage"> -->
+                   <!--     <?php-->
+                   <!--     if (! empty($message)) {-->
+                   <!--         ?>-->
+                   <!--         <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>-->
+                   <!--     <?php-->
+                   <!--     }-->
+                   <!--     ?>-->
+                   <!-- </div>-->
                 </div>
 
               </div>
             </form>
-          </div> -->
+            <span id="sucessMessage"> </span>
+          </div> 
         </div>
-
-      </div>
+</div>
+     
 
     </section><!-- /Contact Section -->
 
@@ -911,7 +925,50 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
   <!-- Main JS File -->
   <script src="/headerFooterFrame.js"></script>
   <script src="assets/js/main.js"></script>
- 
+  
+   <script type="text/javascript">
+   
+
+function validate(){
+  var name = document.getElementById("name").value;
+  var subject = document.getElementById("subject").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message");
+  
+  error_message.style.padding = "10px";
+  
+  var text;
+  if(name.length < 5){
+    text = "Please Enter valid Name";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(subject.length < 10){
+    text = "Please Enter Correct Subject";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(isNaN(contact) || contact.length != 10){
+    text = "Please Enter valid Phone Number";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6){
+    text = "Please Enter valid Email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(message.length <= 140){
+    text = "Please Enter More Than 140 Characters";
+    error_message.innerHTML = text;
+    return false;
+  }
+  alert("Form Submitted Successfully!");
+  return true;
+}
+ </script>
 
 </body>
 
