@@ -810,6 +810,72 @@
 
 
     </section>
+    <section id="clients" class="clients section light-background">
+      <div class="container section-title" data-aos="fade-up">
+       <h2>IWMS/AWMS</h2>
+       <p>Pre-sales Inquiry<br></p>
+     </div>
+     <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+        
+
+  
+        <div class="col-lg-6">
+          <form action="forms/mail.php"  onsubmit="return validate()" method="post"  data-aos="fade-up" data-aos-delay="500">
+             <!--<form action="validate()"  data-aos="fade-up" data-aos-delay="500"> -->
+            
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+              </div>
+               <div class="col-md-12 ">
+                <!--<input type="text" class="form-control" name="contact" placeholder="Your Contact " required="true">-->
+                
+                 <!--<input id="contact" type="tel" pattern="/^([+]\d{2}[ ])?\d{10}$/" required > -->
+                 <input id="contact" name="contact" type="tel" class="form-control" placeholder="9800000000 " pattern="^[789]\d{9}$" required >
+                  <!--<input id="contact" name="contact" type="tel" class="form-control" placeholder="+91 9800010110 " pattern="^([+]\d{2}[ ])?\d{10}$" required >-->
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+              </div>
+
+              <div class="col-md-4 text-right">
+                <!--<div class="loading">Loading</div>-->
+                <!--<div class="error-message"></div>-->
+                <!--<div class="sent-message">Your message has been sent. Thank you!</div>-->
+                <input type="submit"  class="btn btn-secondary" value="Send">
+<!--<input type="submit"  class="btn-get-started" value="Send">-->
+                <!--<button type="submit " class="btn btn-secondary">Send Message</button>-->
+                 <!--<div id="statusMessage"> -->
+                 <!--     <?php-->
+                 <!--     if (! empty($message)) {-->
+                 <!--         ?>-->
+                 <!--         <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>-->
+                 <!--     <?php-->
+                 <!--     }-->
+                 <!--     ?>-->
+                 <!-- </div>-->
+              </div>
+
+            </div>
+          </form>
+          <span id="sucessMessage"> </span>
+        </div> 
+      </div>
+</div>
+    </section>
+ 
 
   </main>
   <special-footer></special-footer>
