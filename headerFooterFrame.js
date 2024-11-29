@@ -29,7 +29,7 @@ class SpecialHeader extends HTMLElement {
 
            <li class="dropdown"><a href="index.html#products"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="product-details.html">IWMS</a></li>
+              <li><a href="product-details.html">AWMS</a></li>
               
               <li><a href="product_2.html">RE Roamrider</a></li>
               <li><a href="product-details1.html">RE Topbox </a></li>
