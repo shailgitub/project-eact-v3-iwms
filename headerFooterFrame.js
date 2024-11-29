@@ -14,27 +14,18 @@ class SpecialHeader extends HTMLElement {
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           
-          <li class="dropdown"><a href="index.html#services"><span>Services</span>
+         <!-- <li class="dropdown"><a href="index.html#services"><span>Services</span>
            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
             
            
               <li><a href="service-details.html">Research and Development</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> 
-              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li> -->
+              
               <li><a href="service-details.html#engservices">Engineering services</a></li>
               <li><a href="service-details.html#print3d">3d Printing </a></li>
               <li><a href="service-details.html#consulting">Consulting Services</a></li>
             </ul>
-          </li>
+          </li> -->
 
            <li class="dropdown"><a href="index.html#products"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -74,7 +65,7 @@ class SpecialFooter extends HTMLElement {
             <span class="sitename">E-actuell</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>VP Nagar, Manipal-576102</p>
+            <p>BTM Layout 2nd Stage, Bangalore-560076</p>
             <p>Karnataka, INDIA</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+91 9343 570 880</span></p>
             <p><strong>Email:</strong> <span>info@e-actuell.com</span></p>
@@ -98,15 +89,7 @@ class SpecialFooter extends HTMLElement {
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-           <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#r&d">Research and Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#engservices">Engineering services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#print3d">3d Printing </a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html#consulting">Consulting Services</a></li>
-          </ul>
-        </div>
+       
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4>Our Newsletter</h4>
