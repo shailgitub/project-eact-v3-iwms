@@ -39,7 +39,7 @@ class SpecialHeader extends HTMLElement {
           
               
           
-          <li><a href="index.html#portfolio">Specialization</a></li>
+          <li><a href="index.html#methodology">Methodology</a></li>
           <li><a href="index.html#team">Career</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -83,7 +83,7 @@ class SpecialFooter extends HTMLElement {
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#methodology">Methodology</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
           </ul>
