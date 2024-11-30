@@ -6,13 +6,13 @@ class SpecialHeader extends HTMLElement {
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">E-actuell</h1>
+        <h1 class="sitename">E-ACTUELL</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#about">About Us</a></li>
           
          <!-- <li class="dropdown"><a href="index.html#services"><span>Services</span>
            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -39,14 +39,14 @@ class SpecialHeader extends HTMLElement {
           
               
           
-          <li><a href="index.html#methodology">Methodology</a></li>
+          <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#team">Career</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="cta-btn" href="index.html#about">Get Started</a>
+     <!-- <a class="cta-btn" href="index.html#about">Get Started</a> -->
 
     </div>
   </header> `;
@@ -62,12 +62,12 @@ class SpecialFooter extends HTMLElement {
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">E-actuell</span>
+            <span class="sitename">E-ACTUELL</span>
           </a>
           <div class="footer-contact pt-3">
             <p>BTM Layout 2nd Stage, Bangalore-560076</p>
             <p>Karnataka, INDIA</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 9343 570 880</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9738 388 660</span></p>
             <p><strong>Email:</strong> <span>info@e-actuell.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
@@ -83,7 +83,7 @@ class SpecialFooter extends HTMLElement {
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#methodology">Methodology</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
           </ul>
