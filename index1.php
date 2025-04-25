@@ -680,7 +680,7 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
             <span id="sucessMessage"> </span>
           </div> 
         </div>
-</div>
+
      
 
     </section><!-- /Contact Section -->
@@ -695,19 +695,7 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  Welcome
-  <?php
-  require __DIR__ . '/counter/counter.php';
 
-  // make one hit
-  makeHit();
-
-  // printing total hits
-  echo "Total Hit: " . getHit();
-  ?>
-  <?php echo "<br>"; // add IP address if it doesn't exist in list addUniqueIP(); //
-  // print unique visitors echo "Unique Visitors: " . getUniqueVisitor(); 
-  ?>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -766,7 +754,19 @@ function validate(){
   return true;
 }
  </script>
+  Welcome
+  <?php
+  require __DIR__ . '/counter/counter.php';
 
+  // make one hit
+  makeHit();
+
+  // printing total hits
+  echo "Total Hit: " . getHit();
+  ?>
+  <?php echo "<br>"; // add IP address if it doesn't exist in list addUniqueIP(); //
+  // print unique visitors echo "Unique Visitors: " . getUniqueVisitor(); 
+  ?>
 </body>
 
 </html>
