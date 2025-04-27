@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #273d4e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ff4a17; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #273d4e;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #ff4a17;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #e5eaee;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ff4a17; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ff4a17; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #e5eaee;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ff4a17;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ff4a17;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -756,7 +768,7 @@ h6 {
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
-  position: fixed;
+  position: left;
   visibility: hidden;
   opacity: 0;
   right: 15px;
@@ -870,6 +882,7 @@ section,
   padding-bottom: 60px;
   position: relative;
 }
+
 .section-title1 {
   padding-bottom: 30px;
   position: relative;
@@ -904,6 +917,7 @@ section,
   text-transform: uppercase;
   font-family: var(--heading-font);
 }
+
 .section-title h4 {
   color: var(--heading-color);
   margin: 0;
@@ -1215,6 +1229,7 @@ section,
   transition: 0.3s;
   text-transform: uppercase;
 }
+
 .features .nav-link {
   background-color: var(--surface-color);
   color: var(--heading-color);
@@ -1464,18 +1479,21 @@ section,
     width: 80%;
   }
 }
+
 /*--------------------------------------------------------------
 # Specialization
 --------------------------------------------------------------*/
 .specialization .portfolio-item {
   margin-bottom: 30px;
 }
+
 .specialization #portfolio-flters {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
 }
+
 .specialization #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
@@ -1489,13 +1507,17 @@ section,
   transition: all 0.3s ease-in-out;
   border-radius: 3px;
 }
-.specialization #portfolio-flters li:hover, .specialization #portfolio-flters li.filter-active {
+
+.specialization #portfolio-flters li:hover,
+.specialization #portfolio-flters li.filter-active {
   color: #fff;
   background: #5c9f24;
 }
+
 .specialization #portfolio-flters li:last-child {
   margin-right: 0;
 }
+
 .specialization .portfolio-wrap {
   transition: 0.3s;
   position: relative;
@@ -1503,6 +1525,7 @@ section,
   z-index: 1;
   background: rgba(42, 42, 42, 0.7);
 }
+
 .specialization .portfolio-wrap::before {
   content: "";
   background: rgba(42, 42, 42, 0.7);
@@ -1515,9 +1538,11 @@ section,
   z-index: 2;
   opacity: 0;
 }
+
 .specialization .portfolio-wrap img {
   transition: all ease-in-out 0.3s;
 }
+
 .specialization .portfolio-wrap .portfolio-info {
   opacity: 0;
   position: absolute;
@@ -1533,11 +1558,13 @@ section,
   align-items: flex-start;
   padding: 20px;
 }
+
 .specialization .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
 }
+
 .specialization .portfolio-wrap .portfolio-info p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
@@ -1546,10 +1573,12 @@ section,
   margin: 0;
   font-style: italic;
 }
+
 .specialization .portfolio-wrap .portfolio-links {
   text-align: center;
   z-index: 4;
 }
+
 .specialization .portfolio-wrap .portfolio-links a {
   color: #fff;
   margin: 0 5px 0 0;
@@ -1557,15 +1586,19 @@ section,
   display: inline-block;
   transition: 0.3s;
 }
+
 .specialization .portfolio-wrap .portfolio-links a:hover {
   color: #8ed851;
 }
+
 .specialization .portfolio-wrap:hover::before {
   opacity: 1;
 }
+
 .specialization .portfolio-wrap:hover img {
   transform: scale(1.2);
 }
+
 .specialization .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
@@ -1973,4 +2006,68 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.container1 {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-popup:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-popup img {
+  width: 30px;
+  height: 30px;
+}
+
+.popup-content {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.popup-content a:hover {
+  background-color: #128c7e;
+}
+
+.popup-content.active {
+  display: block;
 }
