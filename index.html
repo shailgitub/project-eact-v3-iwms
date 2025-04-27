@@ -682,15 +682,28 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
         </div>
 </div>
      
-
+<div class="whatsapp-popup" onclick="togglePopup()">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp Icon"
+  />
+</div>
+<div class="popup-content" id="whatsappPopup">
+  <p>Chat with us on WhatsApp!</p>
+  <a
+    href="https://wa.me/9590190227?text=Hello%20I%20am%20interested%20in%20your%20services"
+    target="_blank"
+    >Start Chat with E-actuell</a
+  >
+</div>
     </section><!-- /Contact Section -->
-
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-caret-up-fill"></i></a>
   </main>
 
   <!-- // footer data // Designed by <a href="https://bootstrapmadee.com/">BootstrapMade</a> -->
   <special-footer></special-footer>
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -722,7 +735,22 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
   <!-- Main JS File -->
   <script src="/headerFooterFrame.js"></script>
   <script src="assets/js/main.js"></script>
-  
+  <script>
+    function togglePopup() {
+        const popup = document.getElementById('whatsappPopup');
+        popup.classList.toggle('active');
+    }
+
+    document.getElementById('whatsappMessage').addEventListener('input', function() {
+        const message = encodeURIComponent(this.value || 'Hello, I am contacting you from your website');
+        const phoneNumber = '+91-9590190227'; // Replace with your WhatsApp number (e.g., 12025550123)
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+        document.getElementById('whatsappLink').href = whatsappLink;
+    });
+
+    // Trigger initial link setup with default message
+    document.getElementById('whatsappMessage').dispatchEvent(new Event('input'));
+</script>
    <script type="text/javascript">
    
 
