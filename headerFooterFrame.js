@@ -106,6 +106,11 @@ class SpecialFooter extends HTMLElement {
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">E-actuell</strong> <span>All Rights Reserved</span></p>
+      <div class="visitor-counter mt-2 text-muted" style="font-size: 13px; display: none;">
+        <span>Page Loads: <strong id="footer-hit-count">...</strong></span>
+        <span class="mx-2">|</span>
+        <span>Unique Visitors: <strong id="footer-visitor-count">...</strong></span>
+      </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -117,6 +122,28 @@ class SpecialFooter extends HTMLElement {
 
   </footer>
         `;
+
+    // Fetch the reload and unique visitor count from PHP API
+    setTimeout(() => {
+      fetch('./counter_api.php')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          const hitEl = document.getElementById('footer-hit-count');
+          const visitorEl = document.getElementById('footer-visitor-count');
+          const counterEl = document.querySelector('.visitor-counter');
+          if (hitEl && visitorEl && counterEl) {
+            hitEl.textContent = data.total_hits.toLocaleString();
+            visitorEl.textContent = data.unique_visitors.toLocaleString();
+            counterEl.style.display = 'block'; // Make it visible once loaded
+          }
+        })
+        .catch(err => {
+          console.warn("Visitor counter offline (expected on local static preview).");
+        });
+    }, 100);
   }
 }
 customElements.define("special-header", SpecialHeader);
