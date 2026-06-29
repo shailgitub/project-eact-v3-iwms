@@ -635,11 +635,11 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
                 </div>
                  <div class="col-md-12 ">
                   <!--<input type="text" class="form-control" name="contact" placeholder="Your Contact " required="true">-->
@@ -650,11 +650,15 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" id="message" rows="4" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12">
+                  <div id="error_message" style="color: red; font-weight: bold; margin-bottom: 15px; display: none;"></div>
                 </div>
 
                 <div class="col-md-4 text-right">
@@ -708,52 +712,61 @@ The top box also prevents a splash of dirt spinning from the rear wheel.
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="/headerFooterFrame.js"></script>
+  <script src="headerFooterFrame.js"></script>
   <script src="assets/js/main.js"></script>
   
-   <script type="text/javascript">
-   
+  <script type="text/javascript">
+    function validate() {
+      var nameEl = document.getElementById("name");
+      var subjectEl = document.getElementById("subject");
+      var contactEl = document.getElementById("contact");
+      var emailEl = document.getElementById("email");
+      var messageEl = document.getElementById("message");
+      var error_message = document.getElementById("error_message");
+      
+      if (!nameEl || !subjectEl || !contactEl || !emailEl || !messageEl || !error_message) {
+        return true; // fallback to native browser validation if elements aren't found
+      }
 
-function validate(){
-  var name = document.getElementById("name").value;
-  var subject = document.getElementById("subject").value;
-  var phone = document.getElementById("phone").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-  var error_message = document.getElementById("error_message");
-  
-  error_message.style.padding = "10px";
-  
-  var text;
-  if(name.length < 5){
-    text = "Please Enter valid Name";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(subject.length < 10){
-    text = "Please Enter Correct Subject";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(isNaN(contact) || contact.length != 10){
-    text = "Please Enter valid Phone Number";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(email.indexOf("@") == -1 || email.length < 6){
-    text = "Please Enter valid Email";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(message.length <= 140){
-    text = "Please Enter More Than 140 Characters";
-    error_message.innerHTML = text;
-    return false;
-  }
-  alert("Form Submitted Successfully!");
-  return true;
-}
- </script>
+      var name = nameEl.value;
+      var subject = subjectEl.value;
+      var contact = contactEl.value;
+      var email = emailEl.value;
+      var message = messageEl.value;
+
+      error_message.style.padding = "10px";
+      error_message.style.display = "block";
+      
+      var text;
+      if (name.length < 5) {
+        text = "Please Enter valid Name";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if (subject.length < 10) {
+        text = "Please Enter Correct Subject";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if (isNaN(contact) || contact.length != 10) {
+        text = "Please Enter valid Phone Number";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if (email.indexOf("@") == -1 || email.length < 6) {
+        text = "Please Enter valid Email";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if (message.length <= 140) {
+        text = "Please Enter More Than 140 Characters";
+        error_message.innerHTML = text;
+        return false;
+      }
+      alert("Form Submitted Successfully!");
+      return true;
+    }
+  </script>
   Welcome
   <?php
   require __DIR__ . '/counter/counter.php';
